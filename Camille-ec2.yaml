@@ -1,0 +1,11 @@
+Description: This Template will deploy a basic EC2 instance in a default VPC in us-west-1 region.
+Resources:
+  MyEC2Instance: #us-west-1 EC2
+    Type: "AWS::EC2::Instance"
+    Properties: 
+      AvailabilityZone: "us-west-1a"
+      ImageId: "ami-0a2781a262879e465" #Another comment -- This is a Linux AMI
+      InstanceType: t2.micro
+      Tags:
+        -  Key: Name
+           Value: Alain
